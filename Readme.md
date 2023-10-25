@@ -7,12 +7,21 @@
 原本應該是這樣的...
 但是不知道為什麼會有cookie的問題，或是憑證有時限的關係，都會被重新導向首頁。
 
+
 後來的解決方案就是完全透過 Selenium 來爬博碩士論文網的文章，超級痛苦ＱＡＱ
+因為台灣博碩士論文網爬蟲會鎖掉IP，記得打開 proxy server，不然自己的IP就進黑名單拉～
 ```
-python open_web.py
+python open_web_title.py
 ```
+output: 
+
+    root
+    │── all_professor.csv
+    │── done_professor.csv   
+    │── blank_professor.csv 
+    └── log.txt
 執行後會產生四隻檔案
-- all_professor.csv
-- blank_professor.csv
-- done_professor.csv
+- all_professor.csv -> 所有爬蟲資料
+- done_professor.csv -> 所有爬過的教授名單
+- blank_professor.csv -> 沒有資料的教授名單
 - log.txt
