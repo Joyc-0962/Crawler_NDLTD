@@ -16,12 +16,34 @@ python open_web_title.py
 output: 
 
     root
-    │── all_professor.csv
-    │── done_professor.csv   
-    │── blank_professor.csv 
+    │── all_professor_title.csv
+    │── done_professor_title.csv   
+    │── blank_professor_title.csv 
     └── log.txt
 執行後會產生四隻檔案
-- all_professor.csv -> 所有爬蟲資料
-- done_professor.csv -> 所有爬過的教授名單
-- blank_professor.csv -> 沒有資料的教授名單
+- all_professor_title.csv -> 所有爬蟲資料
+- done_professor_title.csv -> 所有爬過的教授名單
+- blank_professor_title.csv -> 沒有資料的教授名單
+- log_title.txt
+
+## 學術學術研發服務網爬蟲 NSTC
+---
+這篇簡單記錄如何從一個已經列出來的指導教授列表，來爬取這個教授的計畫及著作。
+```
+python NSTC.py
+```
+output: 
+    root
+    │── nstc_professor_info.csv
+    │── nstc_projects_list.csv   
+    │── nstc_work_list.csv   
+    │── nstc_done_professor_title.csv   
+    │── nstc_blank_professor_title.csv 
+    └── log_nstc.txt
+執行後會產生六隻檔案
+- nstc_professor_info.csv -> 教授的個人資料
+- nstc_projects_list.csv -> 教授的計畫
+- nstc_work_list.csv -> 教授的著作
+- nstc_done_professor_title.csv -> 所有爬過的教授名單
+- nstc_blank_professor_title.csv -> 沒有資料的教授名單
 - log.txt
